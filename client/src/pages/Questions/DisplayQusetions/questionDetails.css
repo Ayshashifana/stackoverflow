@@ -1,0 +1,131 @@
+.question-details-page{
+    width:(100%-300px-24px);
+    margin: 25px 0px;
+    padding: 0px;
+}
+.quest-details-containers,.display-ans{
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.112);
+}
+.quest-detail-cont1{
+     display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.quest-votes{
+    padding: 5px 20px 5px 10px;
+}
+
+ .quest-votes p{
+    margin: 0%;
+    font-size: 25px;
+
+ }
+ .quest-votes .votes-icon{
+    cursor:pointer;
+    
+ }
+
+ .quest-details-containers .question-body{
+    line-height: 22px;
+    white-space: pre-line;
+ }
+
+ .quest-detail-cont1 .question-detail-tag{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    
+ }
+.quest-detail-cont1 .question-detail-tag p,.post-ans-cont p .ans-tag{
+    padding: 5px;
+    margin: 3px;
+    font-size: 14px;
+    border-radius: 2px;
+    background-color: #e1ecf4;
+    color: #39739d;
+    text-decoration: none;
+}
+
+.quest-action-user{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px 5px;
+}
+
+
+.quest-action-user button, .edit-quest-btn{
+    background-color: transparent;
+    border:none;
+    padding: 5px 0px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #939292;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+.quest-action-user button:active{
+    border-bottom: 2px solid black;
+}
+
+.quest-action-user div:nth-child(2) p,
+.quest-action-user div:nth-child(2) .user-link{
+    text-decoration: none;
+    font-size: 14px;
+    margin: 2px;
+    
+}
+.user-link{
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+
+}
+.user-link div{
+    padding-left: 2px;
+}
+
+.display-ans{
+    display: flex;
+    flex-direction: column;
+}
+
+.post-ans-cont form textarea{
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,0.3);
+    font-family: "Roboto",sans-serif;
+    width: calc(100%-20px);
+    resize: vertical;
+}
+.post-ans-cont form .post-ans-btn{
+    margin: 20px 0px;
+    padding: 10px ;
+    background-color: #009dff;
+    color: white;
+    border:1px solid #009dff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.5s all;
+
+}
+
+.post-ans-cont form .post-ans-btn:hover{
+    background-color: #0086d8;
+}
+.last-tag{
+    padding: 5px;
+    margin: 3px;
+    font-size: 14px;
+    border-radius: 2px;
+    background-color: #e1ecf4;
+    color: #39739d;
+    text-decoration: none;
+}
+
+
+
+

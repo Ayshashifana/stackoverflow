@@ -1,0 +1,38 @@
+body{
+    margin: 0px;
+}
+.buy-container{
+    display:  grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+.price-box{
+    border: 1px solid rgb(237, 230, 230);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px rgb(248, 236, 194),
+    -3px -3px 4px #f8ecc2 ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.price-box p,.price-box h5{
+    margin: 10px;
+    padding: 5px;
+
+}
+.price-box h5{
+    font-size: 20px;
+
+}
+.price-box button{
+    margin-top: 10px;
+    border: none;
+    padding: 8px;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: #f4e19d ;
+}

@@ -16,7 +16,7 @@ import "./questionDetails.css";
 const QuestionDetails = () => {
   const { id } = useParams();
   const quesList = useSelector((state) => state.questionReducer);
-  // console.log(quesList);
+  console.log(quesList);
 
   //   console.log(id);
   // var quesList = [

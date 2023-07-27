@@ -1,0 +1,89 @@
+
+body{
+    margin:0px;
+}
+.post-btn{
+    margin: 50px 0px 0px 50px;
+    font-size: 15px;
+    padding:10px;
+    border: none;
+    background-color: #ecdeac;
+    border-radius: 5px;
+    font-weight: bolder;
+    cursor: pointer;
+    text-decoration:underline;
+}
+
+.people-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 30px;
+}
+.user{
+    margin: 20px;
+    border: 1px solid rgb(246, 237, 237);
+    padding: 20px;
+    box-shadow: 3px 3px 5px #eeda92,
+    -3px -3px 5px #eeda92;
+    border-radius: 10px;
+}
+
+.user .title{
+    display: flex;
+    justify-content: space-between;
+    padding: 3px;
+    padding-bottom: 10px;
+}
+.user .title h2{
+    margin: 2px;
+}
+.user .title button{
+    font-size: 15px;
+    padding-left:10px;
+    border: none;
+    background-color: #ecdeac;
+    border-radius: 5px;
+    font-weight:bold;
+     
+}
+.user .comment{
+    margin: 10px 0px;
+    display: flex;
+    
+    align-items: center;
+}
+.user .comment label {
+    padding-right: 10px;
+    font-weight: 600;
+}
+.user .button-cont{
+    display: flex;
+    justify-content: space-between;
+
+}
+.user .button-cont button{
+    font-size: 15px;
+    padding:10px;
+    border: none;
+    background-color: #ecdeac;
+    border-radius: 5px;
+    
+}
+.comment{
+    display: flex;
+    flex-direction: column;
+}
+.comment .comments div {
+    display: flex;
+    width:300px;
+    
+    /* margin-top: 20px; */
+    /* display: none; */
+}
+
+.comment .comments p{
+    /* border: 1px solid black; */
+   margin-top: 20px;
+   /* margin-left: 20px; */
+   padding: 0px 10px;
+}

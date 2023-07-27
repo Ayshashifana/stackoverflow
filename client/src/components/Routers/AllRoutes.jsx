@@ -9,6 +9,11 @@ import DisplayQuestions from "../../pages/Questions/DisplayQusetions/DisplayQues
 import Tags from '../../pages/Tags/Tags';
 import Users from "../../pages/Users/Users"
 import UserProfile from '../../pages/UserProfile/UserProfile';
+import Buy from '../../pages/Buy/Buy';
+import Sharre from "../../pages/Sharre/Sharre"
+import ChatBot from "../../pages/ChatBot/ChatBot"
+
+
 
 const AllRoutes = () => {
   return (
@@ -21,6 +26,10 @@ const AllRoutes = () => {
         <Route path="/Tags" element={<Tags/>}/>
         <Route path="/Users" element={<Users/>}/>
         <Route path="/Users/:id" element={<UserProfile/>}/>
+        <Route path="/Buy" element={<Buy/>}/>
+        <Route path="/share" element={<Sharre/>}/>
+        <Route path="/Chat" element={<ChatBot/>}/>
+       
     </Routes>
     
   )

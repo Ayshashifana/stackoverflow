@@ -1,0 +1,42 @@
+.post-form{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border: none;
+    margin-top: 15px;
+    box-shadow: 2px 2px 2px gray,-2px -2px 2px gray;
+}
+.post-form div{
+    margin: 5px;
+    
+}
+.post-form .title-cont label,.post-form .caption label{
+    padding-right: 10px;
+    font-weight: 600;
+}
+.post-form .image-cont{
+    border: 1px solid black;
+    width :250px;
+    height: 200px;
+    background-color: rgb(222, 212, 212);
+}
+.post-form .image-cont img{
+    width :250px;
+    height: 200px;
+}
+.post-form .caption{
+    padding: 10px 0px;
+}
+
+.post-form  input[type=submit]{
+
+    width:50px;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px;
+    box-shadow: 2px 2px 2px grey;
+    border-radius: 3px;
+}

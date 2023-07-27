@@ -1,6 +1,6 @@
 import axios from "axios"
-
-const API= axios.create({baseURL:"https://stackover-flow-pj9t.onrender.com"})
+// https://stackover-flow-pj9t.onrender.com
+const API= axios.create({baseURL:"http://localhost:5000"})
 
 API.interceptors.request.use((req)=>{
     if(localStorage.getItem("Profile")){
@@ -29,3 +29,4 @@ export const deleteAnswer=(id,answerId,NoOfAnswers)=>API.patch(`/answer/delete/$
 export const fetchAllUsers=()=>API.get("/user/getAllUsers")
 
 export const updateProfile=(id,updateDate)=>API.patch(`/user/update/${id}`,updateDate)
+

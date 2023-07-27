@@ -2,6 +2,8 @@ import React from 'react'
 
 import {NavLink} from "react-router-dom"
 import Globe from "../../assets/Globe.svg"
+import {faCartShopping,faShare,faComments} from  "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import "./LeftSidebar.css"
 
@@ -38,6 +40,17 @@ const LeftSidebar = () => {
         <p>Users</p>
       </NavLink>
 
+      <NavLink to="/Buy" className="sidenav-links" activeclass="active">
+        <p><FontAwesomeIcon icon={faCartShopping} />  Buy</p>
+      </NavLink>
+
+      <NavLink to="/share" className="sidenav-links" activeclass="active">
+        <p><FontAwesomeIcon icon={faShare} /> Share</p>
+      </NavLink>
+
+      <NavLink to="/chat" className="sidenav-links" activeclass="active">
+        <p><FontAwesomeIcon icon={faComments} />ChatBot</p>
+      </NavLink>
 
     </div>
       </nav>

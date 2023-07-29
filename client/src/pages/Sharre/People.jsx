@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import code1 from "../../assets/code1.jpg"
+// import code1 from "../../assets/code1.jpg"
 import code2 from "../../assets/code2.jpg"
 import code3 from "../../assets/code3.jpg"
 import {faThumbsUp} from  "@fortawesome/free-solid-svg-icons"
@@ -69,32 +69,6 @@ const People = () => {
     }
   </>
    <div className='people-container'>
-
-    <div className="user">
-  <div className="title"><h2>jack</h2>  
-  <button> Follow+ </button></div>
-      
-    <div className='image-container'><img src={code1} alt="" srcset="" width="400px" height="300px"  /></div>
-    <div className="content">
-      <h5>Coding like poetry should be short and concise</h5>
-      <div className="comment">
-      <div>
-      <label htmlFor="comment">Comment:</label>
-      <textarea name="comment" id="" cols="40" rows="2" ></textarea>
-      </div>
-     
-      <div className='comments'>
-        
-
-      </div>
-      </div>
-     </div>
-    <div className='button-cont'>
-    <button><FontAwesomeIcon icon={faThumbsUp} /> Like</button>
-    <button >Comment</button>
-    </div>
-  </div>
-
 
   <div className="user">
   <div className="title"><h2>Rida</h2>  

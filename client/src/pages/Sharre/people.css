@@ -87,3 +87,11 @@ body{
    /* margin-left: 20px; */
    padding: 0px 10px;
 }
+@media (max-width: 1000px) {
+    .people-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        
+    }
+
+}

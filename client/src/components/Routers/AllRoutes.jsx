@@ -12,6 +12,8 @@ import UserProfile from '../../pages/UserProfile/UserProfile';
 import Buy from '../../pages/Buy/Buy';
 import Sharre from "../../pages/Sharre/Sharre"
 import ChatBot from "../../pages/ChatBot/ChatBot"
+import Otp from '../../pages/Otp/Otp';
+
 
 
 
@@ -28,7 +30,9 @@ const AllRoutes = () => {
         <Route path="/Users/:id" element={<UserProfile/>}/>
         <Route path="/Buy" element={<Buy/>}/>
         <Route path="/share" element={<Sharre/>}/>
-        <Route path="/Chat" element={<ChatBot/>}/>
+        <Route path="/chat" element={<ChatBot/>}/>
+        <Route path="/otp" element={<Otp/>}/>
+        
        
     </Routes>
     

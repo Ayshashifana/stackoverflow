@@ -48,9 +48,14 @@ const LeftSidebar = () => {
         <p><FontAwesomeIcon icon={faShare} /> Share</p>
       </NavLink>
 
-      <NavLink to="/chat" className="sidenav-links" activeclass="active">
+      {/* <NavLink to="/chat" className="sidenav-links" activeclass="active">
         <p><FontAwesomeIcon icon={faComments} />ChatBot</p>
+      </NavLink> */}
+
+      <NavLink to="/Otp" className="sidenav-links" activeclass="active">
+        <p><FontAwesomeIcon icon={faComments} /> ChatBot</p>
       </NavLink>
+
 
     </div>
       </nav>

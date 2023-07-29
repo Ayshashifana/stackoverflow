@@ -1,0 +1,48 @@
+.otp-cont{
+    height: 100vh;
+    background-color: rgb(14, 120, 100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.otp-form{
+   text-align: center;
+
+}
+.otp-form h1{
+    font-size: 40px;
+    color: white;
+}
+
+.otp-form .label-name{
+    padding: 20px 0px;
+}
+.otp-form .send-button{
+    margin: 24px;
+    padding: 15px;
+    border-radius: 30px;
+    border: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    box-shadow: 3px 3px 5px rgb(26, 85, 74),-3px -3px 5px rgb(26, 85, 74) ;
+    color:rgb(14, 120, 100) ;
+}
+.verify-otp{
+    margin: 24px;
+    padding: 15px;
+    border-radius: 30px;
+    border: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    box-shadow: 3px 3px 5px rgb(26, 85, 74),-3px -3px 5px rgb(26, 85, 74) ;
+    color:rgb(14, 120, 100) ;
+}
+.labeling{
+    color: white;
+    font-size: 20px;
+}
+.otp-container{
+    margin: 20px;
+}

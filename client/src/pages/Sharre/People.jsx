@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 // import code1 from "../../assets/code1.jpg"
 import code2 from "../../assets/code2.jpg"
 import code3 from "../../assets/code3.jpg"
-import {faThumbsUp} from  "@fortawesome/free-solid-svg-icons"
+import {faThumbsUp,faCheck} from  "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import SharePost from './SharePost'
 import FileBase64 from 'react-file-base64';
@@ -15,12 +15,15 @@ import "./people.css"
 const People = () => {
 
   const [Switch,setSwitch]=useState(false)
-
+  const [follow, setfollow] = useState(true)
 
   
   const [postData, setpostData] = useState({creator:"",message:"",selectedFile:""})
    const [Items,setItems]=useState([])
 
+   const onFollow=()=>{
+    setfollow(!follow)
+}
 
     const handleSubmit=(e)=>{
         e.preventDefault()
@@ -72,7 +75,7 @@ const People = () => {
 
   <div className="user">
   <div className="title"><h2>Rida</h2>  
-  <button> Follow+ </button></div>
+  <button onClick={onFollow}> { follow ? "Follow + " : <FontAwesomeIcon icon={faCheck} /> } </button></div>
       
     <div className='image-container'><img src={code2} alt="" srcset="" width="400px" height="300px"  /></div>
     <div className="content">
@@ -96,7 +99,7 @@ const People = () => {
 
   <div className="user">
   <div className="title"><h2>Arshin</h2>  
-  <button> Follow+ </button></div>
+  <button onClick={onFollow}> { follow ? "Follow + " : <FontAwesomeIcon icon={faCheck} /> } </button></div>
       
     <div className='image-container'><img src={code3} alt="" srcset="" width="400px" height="300px"  /></div>
     <div className="content">

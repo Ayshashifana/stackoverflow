@@ -3,22 +3,32 @@ import "./chat.css"
 import '@chatscope/chat-ui-kit-styles/dist/default/styles.min.css';
 import { MainContainer, ChatContainer, MessageList, Message, MessageInput, TypingIndicator } from '@chatscope/chat-ui-kit-react';
 
-const API_KEY=process.env.REACT_APP_API_KEY;
+
+
 const Chat = () => {
 
-    const [messages, setMessages] = useState([
-        {
-          message: "Hello, I'm a ChatBot! Ask me anything!",
-          sentTime: "just now",
-          sender: "ChatBot"
-        }
-      ]);
+  const [messages, setMessages] = useState([
+    {
+      message: "Hello, I'm a ChatBot! Ask me anything!",
+      sentTime: "just now",
+      sender: "ChatBot"
+    }
+  ]);
+  const [isTyping, setIsTyping] = useState(false);
 
-      const [isTyping, setIsTyping] = useState(false);
 
-        const handleSend=async ( message)=>{
-
-            const newMessage={
+  const handleSend=async ( message)=>{
+   
+    const options = {
+      method :"POST",
+      body :JSON.stringify({
+        message:message
+      }),
+      headers:{
+        "Content-Type":"application/json"
+      }
+    }
+    const newMessage={
                 message:message,
                 sender : "user",
                 direction:"outgoing"
@@ -27,49 +37,36 @@ const Chat = () => {
             setMessages(newMessages)
             setIsTyping(true)
             await messageToChatBot(newMessages)
+
+            async function messageToChatBot(chatMessages){
+              let apiMessage = chatMessages.map((messageObject)=>{
+                  let role='';
+                  if(messageObject.sender === "ChatBot"){
+                      role="assistant"
+                  }else{
+                      role="user"
+                  }
+                  return{role:role,content : messageObject.message}
+              }) 
+
+
+    try {
+
+    const response= await fetch("http://localhost:5000/completions",options)
+     const data = await response.json()
+  
+   setMessages([...chatMessages,{
+                message:data.choices[0].message.content,
+                sender : "ChatBot"
+  }],apiMessage)
+  setIsTyping(false);
 }
-
-async function messageToChatBot(chatMessages){
-    let apiMessage = chatMessages.map((messageObject)=>{
-        let role='';
-        if(messageObject.sender === "ChatBot"){
-            role="assistant"
-        }else{
-            role="user"
-        }
-        return{role:role,content : messageObject.message}
-    })
-
-    const systemMessage={
-        role:"system",
-        content : "Explain all concepts of Programming"
+    catch (error) {
+      console.log(error);
     }
+  }
 
-    const apiRequestBody={
-        "model":"gpt-3.5-turbo",
-        "messages":[systemMessage,...apiMessage]
-    }
-
-
-    await fetch("https://api.openai.com/v1/chat/completions",{
-        method:"POST",
-        headers:{
-            "Authorization":"Bearer "+ API_KEY,
-            "Content-Type":"application/json"
-        },
-        body:JSON.stringify(apiRequestBody)
-
-    }).then((data)=>{
-        return data.json();
-    }).then((data)=>{
-        console.log(data);
-        setMessages([...chatMessages,{
-            message:data.choices[0].message.content,
-            sender : "ChatBot"
-        }])
-        setIsTyping(false);
-    })
-}
+  }
    
   return (
     <div className="chat-container">
@@ -88,7 +85,7 @@ async function messageToChatBot(chatMessages){
               typingIndicator={isTyping ? <TypingIndicator content="ChatGPT is typing" /> : null}
             >
               {messages.map((message, i) => {
-                console.log(message)
+              
                 return <Message key={i} model={message} />
               })}
             </MessageList>

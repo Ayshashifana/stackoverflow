@@ -75,7 +75,7 @@ const Otp = () => {
   }
   const navigate=useNavigate()
   const ToChatbot=()=>{
-    navigate("/chat")
+    navigate("/completions")
   }
   return (
     <section className='otp-cont' >

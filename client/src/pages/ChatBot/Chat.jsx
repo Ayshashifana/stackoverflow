@@ -52,7 +52,7 @@ const Chat = () => {
 
     try {
 
-    const response= await fetch("http://localhost:5000/completions",options)
+    const response= await fetch("https://stackflow.onrender.com/completions",options)
      const data = await response.json()
   
    setMessages([...chatMessages,{

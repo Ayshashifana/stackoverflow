@@ -90,7 +90,7 @@ const QuestionDetails = () => {
   const User = useSelector(state=>(state.currentUserReducer))
 
   const location = useLocation()
-  const url = "https://stackflow.onrender.com"
+  const url = "https://stackflow-chat.onrender.com"
 
   const handlePostAns = (e,answerLength)=>{
     e.preventDefault();

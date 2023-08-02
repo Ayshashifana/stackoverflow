@@ -1,7 +1,6 @@
 import axios from "axios"
-// http://localhost:5000
-// https://stackflow-chat.onrender
-const API= axios.create({baseURL:"http://localhost:5000"})
+
+const API= axios.create({baseURL:"https://stackflow-chat.onrender.com"})
 
 API.interceptors.request.use((req)=>{
     if(localStorage.getItem("Profile")){

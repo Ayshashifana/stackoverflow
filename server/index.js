@@ -29,6 +29,8 @@ app.use("/answer",answerRoutes)
 
 
 const API_KEY=process.env.REACT_APP_API_KEY;
+
+// const API_KEY="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"
 app.post("/completions",async (req,res)=>{
   
    
